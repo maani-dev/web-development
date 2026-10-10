@@ -20,17 +20,12 @@ body {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background:
-        radial-gradient(ellipse at center,
-        #241006 0%,
-        #100804 35%,
-        #050505 75%);
+    background: radial-gradient(ellipse at center,#241006 0%,#100804 35%,#050505 75%);
 }
 
 /* ===== NEON TUNNEL BACKGROUND ===== */
-
 .main::before {
-    content: "";
+    content: " ";
     position: absolute;
     inset: -20%;
     z-index: -1;
@@ -41,46 +36,30 @@ body {
             transparent 0px,
             transparent 39px,
             rgba(255, 90, 0, 0.65) 40px,
-            transparent 42px
-        ),
+            transparent 42px),
         repeating-linear-gradient(
             90deg,
             transparent 0px,
             transparent 39px,
             rgba(255, 90, 0, 0.65) 40px,
-            transparent 42px
-        );
-    transform: perspective(500px)
-               rotateX(58deg)
-               scale(1.5);
+            transparent 42px);
+    transform: perspective(500px) rotateX(58deg) scale(1.5);
     transform-origin: center center;
-    mask-image: radial-gradient(
-        ellipse at center,
-        black 5%,
-        rgba(0, 0, 0, 0.7) 40%,
-        transparent 75%
-    );
+    mask-image: radial-gradient(ellipse at center,black 5%,rgba(0, 0, 0, 0.7) 40%,transparent 75%);
     animation: tunnelMove 5s linear infinite;
 }
 
 /* ===== DARK EDGES ===== */
-
 .main::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: radial-gradient(
-        ellipse at center,
-        transparent 10%,
-        rgba(0, 0, 0, 0.35) 60%,
-        #000 100%
-    );
+    background: radial-gradient(ellipse at center,transparent 10%,rgba(0, 0, 0, 0.35) 60%,#000 100%);
 }
 
 /* ===== SMOOTH MOVEMENT ===== */
-
 @keyframes tunnelMove {
     from {
         background-position: 0 0, 0 0;
@@ -92,7 +71,6 @@ body {
 }
 
 /* ===== NAVBAR ===== */
-
 .nav {
     min-height: 85px;
     padding: 15px 5%;
@@ -107,40 +85,24 @@ body {
     border-bottom: 1px solid rgba(255, 90, 0, 0.3);
 }
 
-
 .logo {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -60px;
 }
 
-.logo h2 {
-    margin: 0;
-    color: #fff;
-}
-
-.logo h2 span {
-    color: #ff6500;
+.logo-text {
+    display: block;
+    width: 150px;
+    height: 55px;
 }
 
 .underline {
-    width: 100%;
-    height: 12px;
-    margin-top: 0.3;
-    position: relative;
-}
-
-.underline::after {
-    content: "";
-    position: absolute;
-    inset: 0 8%;
-    background: linear-gradient(
-        to right,
-        #ff6500 0%,
-        #ff6500 50%,
-        #ffffff 50%,
-        #ffffff 100%
-    );
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M 2 18 Q 100 -10 198 18' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M 2 18 Q 100 -10 198 18' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+    display: block;
+    width: 35%;
+    height: 15px;
+    margin-top: -30px;
 }
 
 .menu ul {
@@ -163,7 +125,6 @@ body {
 }
 
 /* ===== SEARCH ===== */
-
 .search {
     display: flex;
 }
@@ -200,7 +161,6 @@ body {
 }
 
 /* ===== MAIN CONTENT ===== */
-
 .content {
     min-height: calc(100vh - 85px);
     padding: 55px 7%;
@@ -213,7 +173,6 @@ body {
 }
 
 /* ===== LEFT INTRO SECTION ===== */
-
 .intro {
     flex: 1;
     min-width: 0;
@@ -271,7 +230,6 @@ body {
 }
 
 /* ===== LOGIN FORM ===== */
-
 .form {
     width: 290px;
     flex-shrink: 0;
@@ -350,7 +308,6 @@ body {
 }
 
 /* ===== SOCIAL ICONS ===== */
-
 .icons {
     display: flex;
     justify-content: center;
@@ -368,7 +325,6 @@ body {
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
-
 @media (max-width: 900px) {
     .nav {
         justify-content: center;
@@ -418,8 +374,7 @@ body {
     }
 }
 
-/* ===== REDUCE MOTION OPTION ===== */
-
+===== REDUCE MOTION OPTION =====
 @media (prefers-reduced-motion: reduce) {
     .main::before {
         animation: none;

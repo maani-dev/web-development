@@ -8,14 +8,30 @@
 </head>
 <body>
     <div class="main">
-        <header>
+      <header>
         <div class="nav"> 
-
             <div class="logo">
-                <h2>NEX<span>ORA</span></h2>
-                <div class="underline"></div>
+                <svg class="logo-text" viewBox="0 0 240 70">
+                    <defs>
+                        <path id="textCurve" d="M 15 55 Q 120 -5 225 55"/>
+                    </defs>
+                    <text font-size="32" font-weight="bold" font-family="Arial, sans-serif">
+                        <textPath href="#textCurve" startOffset="50%" text-anchor="middle">
+                            <tspan fill="#ffffff">NEX</tspan><tspan fill="#ff6500">ORA</tspan>
+                        </textPath>
+                    </text>
+                </svg>
+                <svg class="underline" viewBox="0 0 200 14" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="lineColor" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="50%" stop-color="#ff6500"/>
+                            <stop offset="50%" stop-color="#ffffff"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M 0 12 Q 100 -8 200 12" fill="none" stroke="url(#lineColor)" stroke-width="2"/>
+                </svg>
             </div>
-
+            
             <div class="menu">
                 <ul>
                     <li><a href="#"> Home</a></li>
@@ -25,31 +41,28 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-
+            
             <div class="search">
                 <input class="srch" type="search" name="search" placeholder="Type for Search">
                 <a href="#"> <button class="btn">Search</button> </a>
             </div>
-
         </div>
-        </header>
-        <main>
+      </header>
+
+      <main>
         <div class="content">
-             <div class="intro">
-                <h1>Web Design &<br>
-                <span>Development</span>
-                </h1>
+            <div class="intro">
+                <h1>Web Design & <br> <span>Development</span> </h1>
 
                 <p class="intro-text">
                     Looking for a website that stands out? I create modern, responsive,
                     and visually appealing websites tailored to your needs. From business 
                     website to personal portfolios, I bring your ideas to life with clean 
                     designs and smooth user experiences.
+                </p>
 
-
-                
                 <button class="cn"><a href="mailto:muhammadrehyan123@gmail.com">Contact Us</a></button>
-              </div>
+            </div>
 
             <div class="form">
                 <h2>Login Here</h2>
@@ -57,8 +70,7 @@
                 <input type="password" name="password" placeholder="Enter Password">
                 <button class="btnn"><a href="#"> Login </a></button>
 
-                <p class="link">Don't have an account? <br>
-                <a href="#"> Sign Up</a> </p> 
+                <p class="link">Don't have an account? <br> <a href="#">Sign Up</a> </p> 
                 <p class="liw">Login with</p>
 
                 <div class="icons">
@@ -70,8 +82,10 @@
                 </div>
             </div>
         </div>
-        </main>
+      </main>
+
     </div>
+    
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     
 </body>
